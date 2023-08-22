@@ -1,0 +1,14 @@
+{
+  "name": "interlinetudoazul",
+  "version": "1.0.0",
+  "description": "Buscar passagens no Interline Tudo Azul",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hanrrison Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.4"
+  }
+}
