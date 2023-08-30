@@ -9,7 +9,8 @@ class TripSearch {
         cy.get(el.validateOriginDestination).contains(user.destination).click()
         cy.get(el.calendarStartDate).clear().type(user.calendarStartDate)
         cy.get(el.calendarEndDate).clear().type(user.calendarEndDate)
-        cy.get(el.cabinCategory).click()
+        cy.get(el.cabinCategory).click()//adicionar a validação para quando alterar a cabine
+        cy.get('.SelectBox__selectLink').contains(user.cabinCategory).click() //encontrar outro jeito de buscar a cabine e validar
     }
 
     submit(){

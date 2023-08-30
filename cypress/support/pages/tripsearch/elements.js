@@ -8,5 +8,4 @@ exports.el = {
     cabinCategory: '#CabinCategory_SelectBoxId',
     btnSearchTickets: '#btnSearchTickets',
     validateOriginDestination: "div[class='menu row']"
-    
 }
