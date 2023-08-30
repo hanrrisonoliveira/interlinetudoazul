@@ -6,8 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'https://interline.tudoazul.com/',
-    "viewportWidth": 1024,
-    "viewportHeight": 768,
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
     hideXHRInCommandLog: true
   },
 });
