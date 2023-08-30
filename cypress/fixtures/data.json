@@ -1,0 +1,23 @@
+[
+  {
+    "origin": "GRU",
+    "destination": "ORY",
+    "calendarStartDate": "16/10/2023",
+    "calendarEndDate": "24/10/2023",
+    "cabinCategory": "Economy"
+  },
+  {
+    "origin": "VCP",
+    "destination": "ORY",
+    "calendarStartDate": "16/10/2023",
+    "calendarEndDate": "24/10/2023",
+    "cabinCategory": "Economy"
+  },
+  {
+    "origin": "CGH",
+    "destination": "ORY",
+    "calendarStartDate": "16/10/2023",
+    "calendarEndDate": "24/10/2023",
+    "cabinCategory": "Economy"
+  }
+]

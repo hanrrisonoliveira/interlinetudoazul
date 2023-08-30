@@ -5,9 +5,7 @@ import { faker } from '@faker-js/faker';
 
 describe('Ida e Volta', function () {
 
-    
-    
-
+    const data = require ('../fixtures/data')
 
     const user = {
         origin: faker.airline.airport().iataCode,
@@ -21,11 +19,36 @@ describe('Ida e Volta', function () {
         cy.visit('/')
     })
 
-
-    it('Deve localizar passagem do tipo ida e volta', function () {
+    it.only('Teste para validar se os campos estão vindo corretamente', function () {
 
         tripsearch.form(user)
         tripsearch.submit()
+        cy.get('#wait-message').should('be.visible')
+        cy.get('#componentFlightGrid-departureFlightOptions-flightGrid',{ timeout: 30000 }).should("be.visible")
+        cy.get('#lblResultNotFound').should("not.exist")
         
     })
+
+    it('Deve localizar passagem do tipo ida e volta - Faker', function () {
+
+        tripsearch.form(user)
+        tripsearch.submit()
+        cy.get('#wait-message').should('be.visible')
+        cy.get('#componentFlightGrid-departureFlightOptions-flightGrid',{ timeout: 30000 }).should("be.visible")
+        
+    })
+
+    data.forEach((user, index) =>{
+        it(`${index + 1} - Deve localizar passagem do tipo ida e volta - JSON`, function () {
+
+            tripsearch.form(user)
+            tripsearch.submit()
+            cy.get('#wait-message').should('be.visible')
+            cy.get('#componentFlightGrid-departureFlightOptions-flightGrid',{ timeout: 30000 }).should("be.visible")
+            
+        })
+    })
+
+
+   
 })
